@@ -1,0 +1,40 @@
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.4px;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.links a {
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.links a:hover {
+  color: var(--mint);
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    padding: 0 20px;
+  }
+}

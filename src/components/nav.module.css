@@ -1,0 +1,124 @@
+.nav {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 50;
+}
+
+.row {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--mint);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow {
+  display: inline-block;
+  padding: 0 1px;
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+}
+
+.links a {
+  color: var(--text-2);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  transition: color 0.15s;
+}
+
+.links a:hover {
+  color: var(--text);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.status {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 0 0 rgba(93, 202, 165, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(93, 202, 165, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(93, 202, 165, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(93, 202, 165, 0);
+  }
+}
+
+.cta {
+  background: var(--mint);
+  color: var(--mint-dark);
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background 0.15s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cta:hover {
+  background: var(--mint-2);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+  .status {
+    display: none;
+  }
+  .row {
+    padding: 0 20px;
+  }
+}

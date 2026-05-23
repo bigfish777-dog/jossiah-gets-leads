@@ -1,0 +1,80 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 32px;
+  position: relative;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-3);
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.role {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--mint);
+  letter-spacing: 0.5px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.statNum {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--mint);
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.body p {
+  color: var(--text-2);
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
