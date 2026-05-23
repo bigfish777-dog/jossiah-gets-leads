@@ -59,7 +59,7 @@ export function Cases() {
           </h2>
           <p className={styles.sub}>
             Real numbers from real accounts. Click through for the full
-            breakdown &mdash; spend, leads, close rate, the lot.
+            breakdown - spend, leads, close rate, the lot.
           </p>
         </div>
         <div className={c.grid}>

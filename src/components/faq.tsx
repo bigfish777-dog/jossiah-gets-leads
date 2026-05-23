@@ -7,7 +7,7 @@ import f from "./faq.module.css";
 const faqs = [
   {
     q: "How much does this cost?",
-    a: "Retainers start at \u00a31,500/month + VAT and scale with spend and complexity. We send a fixed quote after the first call \u2014 no \u201Cit depends\u201D pricing.",
+    a: "Retainers start at \u00a31,500/month + VAT and scale with spend and complexity. We send a fixed quote after the first call - no \u201Cit depends\u201D pricing.",
   },
   {
     q: "Do you guarantee results?",
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Which channels do you run?",
-    a: "Meta and LinkedIn for most B2B service businesses. Google Search where intent is high. We don\u2019t run TikTok, YouTube Shorts, or Pinterest for B2B \u2014 they rarely make economic sense.",
+    a: "Meta and LinkedIn for most B2B service businesses. Google Search where intent is high. We don\u2019t run TikTok, YouTube Shorts, or Pinterest for B2B - they rarely make economic sense.",
   },
   {
     q: "How long is the contract?",

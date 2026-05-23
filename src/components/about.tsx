@@ -69,7 +69,7 @@ export function About() {
           <div className={a.body}>
             <p>
               I spent years inside agencies watching paid traffic get sold as a
-              buffet &mdash; Meta, Google, LinkedIn, TikTok, retargeting,
+              buffet - Meta, Google, LinkedIn, TikTok, retargeting,
               lookalikes, the works. Most of it noise. Most of it billed.
             </p>
             <p>

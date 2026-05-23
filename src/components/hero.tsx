@@ -35,7 +35,7 @@ export function Hero() {
             </h1>
             <p className={styles.sub}>
               A paid-traffic agency for coaches, consultants, and B2B service
-              teams who want leads &mdash; more of them, at lower CPLs, and who
+              teams who want leads - more of them, at lower CPLs, and who
               actually become clients.
             </p>
             <div className={styles.btnRow}>

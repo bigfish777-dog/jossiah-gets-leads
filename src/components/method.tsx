@@ -13,7 +13,7 @@ const methods = [
   {
     num: "// 02",
     title: "Landing & funnel",
-    desc: "Cheap clicks don\u2019t matter if the page doesn\u2019t convert. We build landers that turn warm traffic into qualified calls \u2014 not \u201Cdownloads\u201D that go nowhere.",
+    desc: "Cheap clicks don\u2019t matter if the page doesn\u2019t convert. We build landers that turn warm traffic into qualified calls - not \u201Cdownloads\u201D that go nowhere.",
   },
   {
     num: "// 03",
@@ -51,7 +51,7 @@ export function Method() {
           </h2>
           <p className={styles.sub}>
             Most agencies sell you a buffet. We sell you the three courses that
-            actually move pipeline &mdash; and we don&apos;t pretend the rest matters.
+            actually move pipeline - and we don&apos;t pretend the rest matters.
           </p>
         </div>
         <div className={m.grid}>
