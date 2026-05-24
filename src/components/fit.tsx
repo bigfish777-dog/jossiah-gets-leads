@@ -36,9 +36,8 @@ export function Fit() {
             <span className={styles.accent}>not for you.</span>
           </h2>
           <p className={styles.sub}>
-            I work with a small number of clients at a time. That means I
-            have to be picky about who I take on. Here&apos;s how to tell if
-            we&apos;re a fit.
+            I work with a small number of clients at a time. Here&apos;s how
+            to tell if we&apos;re a fit before either of us wastes a call.
           </p>
         </div>
         <div className={f.grid}>
@@ -48,21 +47,19 @@ export function Fit() {
             </div>
             <ul className={f.list}>
               <li>
-                You sell a service or programme worth &pound;1,000+ per client
+                Expert business doing &pound;30k+/month
               </li>
               <li>
-                You&apos;ve got a proven offer that converts when people see
-                it
+                You sell programs, services, or coaching worth &pound;3k+
               </li>
               <li>
-                You can invest &pound;3,500+/month total (management + ad
-                spend)
+                You&apos;ve run ads before and hit a ceiling
               </li>
               <li>
                 You want leads that become clients, not just form fills
               </li>
               <li>
-                You&apos;re comfortable with a 60-90 day ramp before judging
+                You&apos;re comfortable with a 90-day window to judge
                 results
               </li>
             </ul>
@@ -73,21 +70,20 @@ export function Fit() {
             </div>
             <ul className={f.list}>
               <li>
-                You&apos;re pre-revenue or haven&apos;t validated your offer
-                yet
+                You&apos;ve never run paid ads before
               </li>
               <li>
-                You need results in 2 weeks or you&apos;re out
+                You&apos;re happy with your current agency
               </li>
               <li>
-                You want someone to &quot;just run some ads&quot; without
-                touching the funnel
+                Your programs are under &pound;3k
               </li>
               <li>
-                You&apos;re looking for the cheapest option
+                You sell physical products, ecom, or B2C
               </li>
               <li>
-                You want a big agency with a big team and a big deck
+                You want the cheapest option or a big agency with a big
+                team
               </li>
             </ul>
           </div>

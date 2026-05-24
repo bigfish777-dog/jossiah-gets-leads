@@ -102,31 +102,37 @@
   transform: translate(2px, -2px);
 }
 
-/* Chart card */
-.chartCard {
+/* Dashboard card */
+.dashboard {
   background: var(--bg-2);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 24px;
+  padding: 20px;
   position: relative;
 }
 
-.chartHead {
+.dashHead {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashTitle {
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 11px;
   color: var(--text-3);
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
+  letter-spacing: 0.8px;
 }
 
-.live {
+.dashLive {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
   color: var(--mint);
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  letter-spacing: 0.5px;
 }
 
 .pulse {
@@ -150,48 +156,81 @@
   }
 }
 
-.chartValue {
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 56px;
+.dashGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.metric {
+  background: var(--bg);
+  padding: 16px;
+}
+
+.metricLabel {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 9px;
+  color: var(--text-3);
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.metricVal {
+  font-size: 28px;
   font-weight: 600;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   line-height: 1;
   margin-bottom: 4px;
 }
 
-.chartDelta {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: rgba(93, 202, 165, 0.15);
+.metricDelta {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
   color: var(--mint);
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 12px;
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-bottom: 16px;
+  letter-spacing: 0.3px;
 }
 
-.chartLabel {
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  color: var(--text-3);
+.dashBar {
+  height: 3px;
+  background: var(--line);
+  border-radius: 2px;
   margin-bottom: 12px;
+  overflow: hidden;
 }
 
-.chartSvg {
-  width: 100%;
-  height: 180px;
+.dashBarFill {
+  height: 100%;
+  width: 79%;
+  background: var(--mint);
+  border-radius: 2px;
+  animation: barGrow 1.5s ease-out;
 }
 
-.chartFoot {
+@keyframes barGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 79%;
+  }
+}
+
+.dashFoot {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 10px;
   color: var(--text-3);
-  margin-top: 8px;
   letter-spacing: 0.3px;
+}
+
+.dashFootLink {
+  color: var(--mint);
 }
 
 /* Reveal */

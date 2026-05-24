@@ -7,35 +7,35 @@ import f from "./faq.module.css";
 const faqs = [
   {
     q: "Who actually runs my account?",
-    a: "Me. Jossiah. The same person on the sales call is the person in your ad accounts on Tuesday morning. No juniors, no subcontractors, no white-labelling. If I can't give your account the time it needs, I won't take you on.",
+    a: "Me. Jossiah. The same person on the sales call is the person in your ad accounts on Tuesday morning. No juniors, no subcontractors, no white-labelling. That's why the client count stays small.",
   },
   {
     q: "Do I own my ad accounts and data?",
-    a: "Yes, always. Your ad accounts, your landing pages, your creative assets, your lead data - all in your name, on your logins. If we stop working together, you keep everything. I'll even do a handover call to make sure you or your next provider can pick up where we left off.",
+    a: "Yes, always. Ad accounts, landing pages, creative assets, lead data - all in your name, on your logins. If we stop working together, you keep everything. I'll do a handover call to make sure you or your next provider can pick up where I left off.",
   },
   {
-    q: "How much does this cost?",
-    a: "Management fees start at \u00a31,500/month + VAT. Ad spend is separate and billed directly by the platforms to your account - I never mark up media costs. I send a fixed quote after the first call based on your channels and complexity. No \"it depends\" pricing.",
+    q: "Why a 3-month minimum?",
+    a: "Paid traffic needs time to optimise. Month 1 is setup and learning. Month 2 is optimisation. Month 3 is where you start seeing the numbers settle. Judging a campaign after 4 weeks is like judging a diet after one meal. After the initial 3 months, it's month-to-month with 30 days' notice.",
   },
   {
-    q: "Do I need a minimum ad spend?",
-    a: "\u00a32k/month minimum across platforms. Below that, the data's too thin to optimise meaningfully, and you'd be better off with organic and referrals until you're ready.",
-  },
-  {
-    q: "How long is the contract?",
-    a: "30-day rolling. I've never needed lock-ins to keep clients. If the work isn't delivering, you can leave at the end of any month with everything you own.",
+    q: "What's the total monthly investment?",
+    a: "\u00a35,000 + VAT per month management fee. Ad spend is separate and billed directly to you by Meta, Google, or LinkedIn - I never mark up media costs. Most clients spend \u00a32k-5k/month on ads depending on channels and scale.",
   },
   {
     q: "Which channels do you run?",
-    a: "Meta and LinkedIn for most B2B service businesses. Google Search where intent is high. I don't run TikTok, YouTube Shorts, or Pinterest for B2B - they rarely make economic sense at the spend levels most coaches and consultants are working with.",
+    a: "Meta and LinkedIn for most expert businesses. Google Search where intent is high. The channel mix depends on where your buyers are - we figure that out in the strategy session, not before.",
   },
   {
     q: "Do you guarantee results?",
-    a: "No. Anyone who guarantees a specific ROAS or lead volume before seeing your offer, your market, and your current data is lying to you. What I do guarantee: full transparency on what's working, what isn't, and what we're doing about it. If I can't move your numbers in 90 days, I'll tell you before you ask.",
+    a: "No. Anyone who guarantees a specific ROAS or lead volume before seeing your offer, your market, and your data is lying to you. What I guarantee: full transparency on what's working, what isn't, and what I'm doing about it. Every Friday, on video.",
   },
   {
-    q: "What do your reports look like?",
-    a: "One page, every Friday. What we spent, what came in, what we're changing next week. Plain English, not a 40-slide deck designed to look impressive while hiding that nothing's working. You'll also have live access to your dashboards if you want to check in between reports.",
+    q: "What happens on the strategy session?",
+    a: "Founding clients get a full-day session at the studio. We map your offer, your funnel, your current numbers, and build the campaign strategy together. You leave with a clear plan. I leave with everything I need to start building.",
+  },
+  {
+    q: "What do I need to have in place before we start?",
+    a: "A proven offer that converts when people see it. A sales process for when leads come in. A funnel tool (GoHighLevel, Kajabi, whatever you use). And the budget - both for management and ad spend. I don't need you to have perfect ads or landing pages - that's my job.",
   },
 ];
 

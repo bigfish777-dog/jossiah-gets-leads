@@ -1,0 +1,179 @@
+.priceNum {
+  font-size: clamp(48px, 6vw, 80px);
+  letter-spacing: -3px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+/* Founding offer */
+.founding {
+  background: var(--bg-2);
+  border: 1px solid rgba(93, 202, 165, 0.2);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.foundingHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.foundingTag {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--mint);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.slots {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slotDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
+  animation: slotPulse 2s infinite;
+}
+
+@keyframes slotPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(93, 202, 165, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(93, 202, 165, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(93, 202, 165, 0);
+  }
+}
+
+.slotBar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.slotSegment {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.slotOpen {
+  background: var(--mint);
+}
+
+.slotTaken {
+  background: var(--line);
+}
+
+.foundingDesc {
+  color: var(--text-2);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.bonuses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.bonus {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.bonusVal {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--mint);
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.bonusLabel {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.4;
+}
+
+/* Scope / what you handle */
+.scope {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.scopeHead {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.scopeIntro {
+  color: var(--text-2);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.scopeList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.scopeList li {
+  color: var(--text-2);
+  font-size: 14px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scopeList li::before {
+  content: "\2192";
+  color: var(--text-3);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.scopeNote {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--text-3);
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 900px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .bonuses {
+    grid-template-columns: 1fr;
+  }
+}

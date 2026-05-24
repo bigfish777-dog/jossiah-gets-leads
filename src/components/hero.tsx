@@ -34,68 +34,59 @@ export function Hero() {
               <span className={styles.accent}>You get the leads.</span>
             </h1>
             <p className={styles.sub}>
-              A paid-traffic agency for coaches, consultants, and B2B service
-              teams who want leads - more of them, at lower CPLs, and who
-              actually become clients.
+              For expert businesses doing &pound;30k+/month who&apos;ve
+              already tried paid ads and hit a ceiling. You don&apos;t need
+              another agency. You need one operator who gets your market.
             </p>
             <div className={styles.btnRow}>
               <a href="#apply" className={styles.btnPrimary}>
                 Plot a call <span className={styles.arr}>&#x2197;</span>
               </a>
-              <a href="#method" className={styles.btnSecondary}>
-                See the method <span className={styles.arr}>&#x2197;</span>
+              <a href="#offer" className={styles.btnSecondary}>
+                See the offer <span className={styles.arr}>&#x2197;</span>
               </a>
             </div>
           </div>
 
+          {/* Dashboard preview - demonstrates transparency stack */}
           <div
-            className={`${styles.chartCard} ${styles.reveal} ${styles.in}`}
+            className={`${styles.dashboard} ${styles.reveal} ${styles.in}`}
           >
-            <div className={styles.chartHead}>
-              <span>COST PER LEAD</span>
-              <span className={styles.live}>
+            <div className={styles.dashHead}>
+              <span className={styles.dashTitle}>YOUR DASHBOARD</span>
+              <span className={styles.dashLive}>
                 <span className={styles.pulse} />
-                SAMPLE
+                LIVE
               </span>
             </div>
-            <div className={styles.chartValue}>&pound;33</div>
-            <div className={styles.chartDelta}>&darr; 60.7% from week 1</div>
-            <div className={styles.chartLabel}>9-WEEK TREND</div>
-            <svg
-              className={styles.chartSvg}
-              viewBox="0 0 400 180"
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <linearGradient id="fadeFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop
-                    offset="0%"
-                    stopColor="#5DCAA5"
-                    stopOpacity={0.25}
-                  />
-                  <stop
-                    offset="100%"
-                    stopColor="#5DCAA5"
-                    stopOpacity={0}
-                  />
-                </linearGradient>
-              </defs>
-              <path
-                d="M 10 30 L 55 45 L 100 60 L 145 75 L 190 88 L 235 110 L 280 130 L 325 145 L 380 158 L 380 180 L 10 180 Z"
-                fill="url(#fadeFill)"
-              />
-              <path
-                d="M 10 30 L 55 45 L 100 60 L 145 75 L 190 88 L 235 110 L 280 130 L 325 145 L 380 158"
-                fill="none"
-                stroke="#5DCAA5"
-                strokeWidth={2}
-              />
-              <circle cx={380} cy={158} r={4} fill="#5DCAA5" />
-              <circle cx={380} cy={158} r={8} fill="#5DCAA5" opacity={0.3} />
-            </svg>
-            <div className={styles.chartFoot}>
-              <span>WK 01 &middot; &pound;84</span>
-              <span>WK 09 &middot; &pound;33</span>
+            <div className={styles.dashGrid}>
+              <div className={styles.metric}>
+                <div className={styles.metricLabel}>LEADS THIS WEEK</div>
+                <div className={styles.metricVal}>34</div>
+                <div className={styles.metricDelta}>+12 vs last week</div>
+              </div>
+              <div className={styles.metric}>
+                <div className={styles.metricLabel}>COST PER LEAD</div>
+                <div className={styles.metricVal}>&pound;28</div>
+                <div className={styles.metricDelta}>&darr; 18% vs month 1</div>
+              </div>
+              <div className={styles.metric}>
+                <div className={styles.metricLabel}>CALLS BOOKED</div>
+                <div className={styles.metricVal}>11</div>
+                <div className={styles.metricDelta}>32% of leads</div>
+              </div>
+              <div className={styles.metric}>
+                <div className={styles.metricLabel}>AD SPEND</div>
+                <div className={styles.metricVal}>&pound;952</div>
+                <div className={styles.metricDelta}>of &pound;1,200 budget</div>
+              </div>
+            </div>
+            <div className={styles.dashBar}>
+              <div className={styles.dashBarFill} />
+            </div>
+            <div className={styles.dashFoot}>
+              <span>Friday Loom incoming &middot; 14:30</span>
+              <span className={styles.dashFootLink}>View full dashboard &#x2197;</span>
             </div>
           </div>
         </div>

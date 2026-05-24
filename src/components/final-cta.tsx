@@ -24,7 +24,7 @@ export function FinalCTA() {
   return (
     <section className={`${styles.cta} ${styles.reveal}`} id="apply" ref={ref}>
       <div className={styles.wrap}>
-        <span className={styles.eyebrow}>// 05 &middot; Apply</span>
+        <span className={styles.eyebrow}>// Apply</span>
         <h2 className={styles.heading}>
           Tell me what you&apos;re selling.
           <br />
@@ -32,9 +32,9 @@ export function FinalCTA() {
           <span className={styles.accent}>get you leads.</span>
         </h2>
         <p className={styles.sub}>
-          30-minute call. No deck, no pitch. I&apos;ll ask about your offer,
-          your numbers, and your current funnel. If we&apos;re not a fit,
-          I&apos;ll tell you why and point you to someone who is.
+          30-minute call. I&apos;ll ask about your offer, your numbers, and
+          where your current funnel breaks down. If we&apos;re not a fit,
+          I&apos;ll tell you why and point you somewhere better.
         </p>
         <a href="#" className={styles.btn}>
           Plot a call <span className={styles.arr}>&#x2197;</span>
