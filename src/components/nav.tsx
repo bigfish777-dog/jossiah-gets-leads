@@ -9,14 +9,14 @@ export function Nav() {
         </a>
         <div className={styles.links}>
           <a href="#method">Method</a>
-          <a href="#cases">Cases</a>
+          <a href="#how">How it works</a>
           <a href="#about">About</a>
           <a href="#faq">FAQ</a>
         </div>
         <div className={styles.right}>
           <span className={styles.status}>
             <span className={styles.pulse} />
-            Q2 &middot; 03/14 open
+            Accepting clients
           </span>
           <a href="#apply" className={styles.cta}>
             Plot a call &#x2197;

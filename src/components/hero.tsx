@@ -42,8 +42,8 @@ export function Hero() {
               <a href="#apply" className={styles.btnPrimary}>
                 Plot a call <span className={styles.arr}>&#x2197;</span>
               </a>
-              <a href="#cases" className={styles.btnSecondary}>
-                Read a case <span className={styles.arr}>&#x2197;</span>
+              <a href="#method" className={styles.btnSecondary}>
+                See the method <span className={styles.arr}>&#x2197;</span>
               </a>
             </div>
           </div>
@@ -52,14 +52,14 @@ export function Hero() {
             className={`${styles.chartCard} ${styles.reveal} ${styles.in}`}
           >
             <div className={styles.chartHead}>
-              <span>COHORT 014 &middot; CPL</span>
+              <span>COST PER LEAD</span>
               <span className={styles.live}>
                 <span className={styles.pulse} />
-                LIVE
+                SAMPLE
               </span>
             </div>
             <div className={styles.chartValue}>&pound;33</div>
-            <div className={styles.chartDelta}>&darr; 60.7%</div>
+            <div className={styles.chartDelta}>&darr; 60.7% from week 1</div>
             <div className={styles.chartLabel}>9-WEEK TREND</div>
             <svg
               className={styles.chartSvg}

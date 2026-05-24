@@ -6,28 +6,36 @@ import f from "./faq.module.css";
 
 const faqs = [
   {
+    q: "Who actually runs my account?",
+    a: "Me. Jossiah. The same person on the sales call is the person in your ad accounts on Tuesday morning. No juniors, no subcontractors, no white-labelling. If I can't give your account the time it needs, I won't take you on.",
+  },
+  {
+    q: "Do I own my ad accounts and data?",
+    a: "Yes, always. Your ad accounts, your landing pages, your creative assets, your lead data - all in your name, on your logins. If we stop working together, you keep everything. I'll even do a handover call to make sure you or your next provider can pick up where we left off.",
+  },
+  {
     q: "How much does this cost?",
-    a: "Retainers start at \u00a31,500/month + VAT and scale with spend and complexity. We send a fixed quote after the first call - no \u201Cit depends\u201D pricing.",
-  },
-  {
-    q: "Do you guarantee results?",
-    a: "No-one credible does, and anyone who says they do is selling you something. What we do guarantee: you\u2019ll know what\u2019s working by week two, and if we can\u2019t move your numbers in 90 days, we\u2019ll tell you before you ask.",
-  },
-  {
-    q: "Which channels do you run?",
-    a: "Meta and LinkedIn for most B2B service businesses. Google Search where intent is high. We don\u2019t run TikTok, YouTube Shorts, or Pinterest for B2B - they rarely make economic sense.",
-  },
-  {
-    q: "How long is the contract?",
-    a: "30-day rolling. We\u2019ve never needed lock-ins to keep clients, and we\u2019re not going to start now.",
+    a: "Management fees start at \u00a31,500/month + VAT. Ad spend is separate and billed directly by the platforms to your account - I never mark up media costs. I send a fixed quote after the first call based on your channels and complexity. No \"it depends\" pricing.",
   },
   {
     q: "Do I need a minimum ad spend?",
-    a: "\u00a32k/month minimum for paid platforms. Below that, the data\u2019s too thin to optimise on, and you\u2019d be better off doing organic for now.",
+    a: "\u00a32k/month minimum across platforms. Below that, the data's too thin to optimise meaningfully, and you'd be better off with organic and referrals until you're ready.",
   },
   {
-    q: "Who actually runs my account?",
-    a: "Me. Jossiah. The same person on the sales call is the person in your ad accounts on Tuesday morning. No juniors, no account managers, no white-labelling.",
+    q: "How long is the contract?",
+    a: "30-day rolling. I've never needed lock-ins to keep clients. If the work isn't delivering, you can leave at the end of any month with everything you own.",
+  },
+  {
+    q: "Which channels do you run?",
+    a: "Meta and LinkedIn for most B2B service businesses. Google Search where intent is high. I don't run TikTok, YouTube Shorts, or Pinterest for B2B - they rarely make economic sense at the spend levels most coaches and consultants are working with.",
+  },
+  {
+    q: "Do you guarantee results?",
+    a: "No. Anyone who guarantees a specific ROAS or lead volume before seeing your offer, your market, and your current data is lying to you. What I do guarantee: full transparency on what's working, what isn't, and what we're doing about it. If I can't move your numbers in 90 days, I'll tell you before you ask.",
+  },
+  {
+    q: "What do your reports look like?",
+    a: "One page, every Friday. What we spent, what came in, what we're changing next week. Plain English, not a 40-slide deck designed to look impressive while hiding that nothing's working. You'll also have live access to your dashboards if you want to check in between reports.",
   },
 ];
 
@@ -50,7 +58,11 @@ export function FAQ() {
   }, []);
 
   return (
-    <section className={`${styles.section} ${styles.reveal}`} id="faq" ref={ref}>
+    <section
+      className={`${styles.section} ${styles.reveal}`}
+      id="faq"
+      ref={ref}
+    >
       <div className={styles.wrap}>
         <div className={styles.head}>
           <div className={styles.eyebrow}>04 &middot; Common questions</div>

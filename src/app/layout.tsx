@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "Jossiah Gets Leads - Paid traffic for B2B",
   description:
     "A paid-traffic agency for coaches, consultants, and B2B service teams who want leads - more of them, at lower CPLs, and who actually become clients.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

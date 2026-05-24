@@ -4,33 +4,6 @@ import { useEffect, useRef } from "react";
 import styles from "./section.module.css";
 import c from "./cases.module.css";
 
-const cases = [
-  {
-    tag: "// B2B Coach \u00b7 9 weeks",
-    stat: "\u221261%",
-    statLabel: "cost per lead",
-    title: "From \u00a384 to \u00a333 CPL on a cold LinkedIn audience",
-    meta: "Spend: \u00a318,400 \u00b7 412 leads",
-    cohort: "COHORT 014",
-  },
-  {
-    tag: "// SaaS Consultancy \u00b7 6 months",
-    stat: "3.2\u00d7",
-    statLabel: "qualified pipeline",
-    title: "Tripled SQL volume without raising ad budget",
-    meta: "Spend: \u00a342k \u00b7 1,140 leads",
-    cohort: "COHORT 009",
-  },
-  {
-    tag: "// Fractional CFO \u00b7 4 months",
-    stat: "\u00a311\u2192",
-    statLabel: "cost per booked call",
-    title: "Booked-call cost dropped from \u00a374 to \u00a311",
-    meta: "Spend: \u00a38,200 \u00b7 745 calls",
-    cohort: "COHORT 017",
-  },
-];
-
 export function Cases() {
   const ref = useRef<HTMLElement>(null);
 
@@ -50,32 +23,51 @@ export function Cases() {
   }, []);
 
   return (
-    <section className={`${styles.section} ${styles.reveal}`} id="cases" ref={ref}>
+    <section
+      className={`${styles.section} ${styles.reveal}`}
+      id="how"
+      ref={ref}
+    >
       <div className={styles.wrap}>
         <div className={styles.head}>
-          <div className={styles.eyebrow}>02 &middot; Cases</div>
+          <div className={styles.eyebrow}>02 &middot; How it works</div>
           <h2 className={styles.heading}>
-            Receipts, not <span className={styles.accent}>testimonials.</span>
+            Your ads, your accounts,{" "}
+            <span className={styles.accent}>your data.</span>
           </h2>
           <p className={styles.sub}>
-            Real numbers from real accounts. Click through for the full
-            breakdown - spend, leads, close rate, the lot.
+            Most agencies build walls between you and your own campaigns. I
+            do the opposite. Full transparency, from day one.
           </p>
         </div>
         <div className={c.grid}>
-          {cases.map((item) => (
-            <a key={item.cohort} className={c.card} href="#">
-              <div className={c.tag}>{item.tag}</div>
-              <div className={c.stat}>{item.stat}</div>
-              <div className={c.statLabel}>{item.statLabel}</div>
-              <div className={c.title}>{item.title}</div>
-              <div className={c.meta}>{item.meta}</div>
-              <div className={c.foot}>
-                <span>{item.cohort}</span>
-                <span className={c.read}>READ &#x2197;</span>
-              </div>
-            </a>
-          ))}
+          <div className={c.card}>
+            <div className={c.icon}>01</div>
+            <div className={c.title}>You own everything</div>
+            <p className={c.desc}>
+              Ad accounts, landing pages, creative assets, lead lists - all
+              in your name, on your logins. If we part ways, you keep
+              everything. No hostage situations.
+            </p>
+          </div>
+          <div className={c.card}>
+            <div className={c.icon}>02</div>
+            <div className={c.title}>One weekly number</div>
+            <p className={c.desc}>
+              Every Friday you get a one-page report: what we spent, what
+              came in, what we&apos;re changing next week. Plain English. No
+              40-slide decks, no vanity metrics.
+            </p>
+          </div>
+          <div className={c.card}>
+            <div className={c.icon}>03</div>
+            <div className={c.title}>30-day rolling</div>
+            <p className={c.desc}>
+              No lock-ins, no 6-month minimums. If the work isn&apos;t landing,
+              you can walk - with all your assets, data, and learnings
+              intact. I&apos;ve never needed a contract to keep a client.
+            </p>
+          </div>
         </div>
       </div>
     </section>

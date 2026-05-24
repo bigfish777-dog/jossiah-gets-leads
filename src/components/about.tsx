@@ -24,7 +24,11 @@ export function About() {
   }, []);
 
   return (
-    <section className={`${styles.section} ${styles.reveal}`} id="about" ref={ref}>
+    <section
+      className={`${styles.section} ${styles.reveal}`}
+      id="about"
+      ref={ref}
+    >
       <div className={styles.wrap}>
         <div className={styles.head}>
           <div className={styles.eyebrow}>03 &middot; About</div>
@@ -34,8 +38,8 @@ export function About() {
           </h2>
           <p className={styles.sub}>
             You hire an agency, you get an agency. You hire Jossiah, you get
-            Jossiah. The person running your ads is the person you&apos;ll be on the
-            phone with.
+            Jossiah. The person running your ads is the person you&apos;ll be
+            on the phone with.
           </p>
         </div>
         <div className={a.grid}>
@@ -50,38 +54,31 @@ export function About() {
               />
             </div>
             <div className={a.name}>Jossiah Pinto-Day</div>
-            <div className={a.role}>// Founder &middot; Paid Traffic Lead</div>
-            <div className={a.stats}>
-              <div>
-                <div className={a.statNum}>&pound;3.2M</div>
-                <div className={a.statLabel}>Spend managed</div>
-              </div>
-              <div>
-                <div className={a.statNum}>7yr</div>
-                <div className={a.statLabel}>Running ads</div>
-              </div>
-              <div>
-                <div className={a.statNum}>40+</div>
-                <div className={a.statLabel}>B2B accounts</div>
-              </div>
-            </div>
+            <div className={a.role}>// Founder &middot; Paid Traffic</div>
           </div>
           <div className={a.body}>
             <p>
-              I spent years inside agencies watching paid traffic get sold as a
-              buffet - Meta, Google, LinkedIn, TikTok, retargeting,
-              lookalikes, the works. Most of it noise. Most of it billed.
+              I&apos;ve spent years as the in-house media buyer for
+              established coaching and sales training businesses in the UK. I&apos;ve
+              run their Meta campaigns, their Google ads, their YouTube
+              pre-rolls. I&apos;ve sat in the sales room and watched which leads
+              actually convert and which ones waste everyone&apos;s time.
             </p>
             <p>
-              Jossiah Gets Leads exists because B2B coaches, consultants, and
-              service teams don&apos;t need a buffet. They need ads that get the
-              right person on a call, a landing page that doesn&apos;t waste them,
-              and a weekly number that tells them whether it worked.
+              That&apos;s the difference. Most media buyers never see what
+              happens after the click. I&apos;ve closed deals myself. I know
+              what a qualified lead looks like because I&apos;ve been on the
+              other end of the call.
             </p>
-            <p>That&apos;s it. That&apos;s the whole agency.</p>
             <p>
-              If you want someone to make your dashboard look busy, hire someone
-              else. If you want leads that turn into clients, we should talk.
+              Jossiah Gets Leads exists because coaches, consultants, and B2B
+              service teams keep telling me the same story: they hired an
+              agency, got impressive reports, and never saw a return. The
+              agency didn&apos;t understand their business, didn&apos;t
+              understand their buyer, and didn&apos;t care enough to learn.
+            </p>
+            <p>
+              I already know your world. I&apos;ve been living in it.
             </p>
           </div>
         </div>
