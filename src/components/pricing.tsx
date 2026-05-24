@@ -50,7 +50,10 @@ export function Pricing() {
           <p className={styles.sub}>
             3-month minimum. Month-to-month after that with 30 days&apos;
             notice. Ad spend is separate and billed directly by the platforms
-            to your account - I never mark up media costs.
+            to your account - I never mark up media costs. Most agencies
+            in this space charge &pound;10-25k/month and make you guess what
+            they&apos;re actually doing. This is the full service at a
+            fraction of that, with nothing hidden.
           </p>
         </div>
 

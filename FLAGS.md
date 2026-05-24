@@ -4,11 +4,15 @@ Things to push back on, verify, or know before showing this to anyone.
 
 ---
 
-## 1. Competitor research failed again
+## 1. Competitor research completed - social proof is the critical gap
 
-The background agent found agency names via web search but couldn't visit their actual websites - both WebFetch and Bash permissions were denied to background agents. The "anti-agency" positioning hasn't been validated against real competitors. The agency names found (Scale for Impact, 3 Eleven Advertising, Be Known LLC, Think Orion, etc.) are listed in RESEARCH.md but not analyzed.
+6 competitors examined (HighTicketPaidAds, Be Known, Scale for Impact, Marne Semick, Lucia Doynel / Holistic Ads, The Thought Leader Agency). Full analysis in RESEARCH.md section 5.
 
-**What to do:** Either run the competitor research in a session where you can approve WebFetch permissions for each call, or do it manually. The positioning is sound based on market research (buyers want transparency, single operator, no lock-ins) but hasn't been tested against what competitors actually say on their sites.
+The transparency stack, published pricing, founding slots, scope boundaries, and studio inclusion are all validated as genuine differentiators - no competitor does any of these at JGL's level of specificity.
+
+The critical gap is social proof. Lucia Doynel shows named case studies with spend, revenue, ROAS, and timeframe per client. Be Known shows $1.6M revenue for a named coaching client. JGL has nothing. This is the single biggest conversion risk on the site and can only be fixed with real results.
+
+Secondary gap: HighTicketPaidAds offers a performance guarantee ("beat your ROAS or refund"). Worth discussing with Jossiah whether any form of guarantee is appropriate.
 
 ---
 

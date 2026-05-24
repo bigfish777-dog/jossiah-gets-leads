@@ -34,9 +34,10 @@ export function Hero() {
               <span className={styles.accent}>You get the leads.</span>
             </h1>
             <p className={styles.sub}>
-              For expert businesses doing &pound;30k+/month who&apos;ve
-              already tried paid ads and hit a ceiling. You don&apos;t need
-              another agency. You need one operator who gets your market.
+              For expert businesses doing &pound;30k+/month with &pound;3k+
+              programmes, already running ads and hitting a ceiling. You
+              don&apos;t need another agency. You need one operator who
+              gets your market.
             </p>
             <div className={styles.btnRow}>
               <a href="#apply" className={styles.btnPrimary}>

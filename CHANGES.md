@@ -1,6 +1,41 @@
 # Changes Log
 
-Two passes: overnight research pass (2026-05-23) and offer correction pass (2026-05-24).
+Three passes: overnight research (2026-05-23), offer correction (2026-05-24), competitor research (2026-05-24).
+
+---
+
+## What competitor research changed
+
+### Hero subhead sharpened with programme-value qualifier
+
+**Old:** "For expert businesses doing GBP 30k+/month who've already tried paid ads and hit a ceiling."
+
+**New:** "For expert businesses doing GBP 30k+/month with GBP 3k+ programmes, already running ads and hitting a ceiling."
+
+**Why:** HighTicketPaidAds.com qualifies with "$3K+ offer via sales calls, doing $25K+/month, currently running Meta ads at $200/day or more." That's tighter than JGL's subhead was. Adding "GBP 3k+ programmes" echoes the Fit check criteria and filters out low-ticket sellers in the hero itself, before they scroll.
+
+### Pricing context added
+
+**Old:** "Ad spend is separate and billed directly by the platforms to your account - I never mark up media costs."
+
+**New:** Added "Most agencies in this space charge GBP 10-25k/month and make you guess what they're actually doing. This is the full service at a fraction of that, with nothing hidden."
+
+**Why:** Be Known publishes pricing at $3,500/month and explicitly compares against competitors at "$15K to 25K per month." The competitive framing makes their price feel like a deal rather than an expense. JGL at GBP 5,000 is well below the GBP 10-25K range for comparable agencies. Making this explicit turns the price into a positioning statement.
+
+### What competitor research validated (no changes needed)
+
+- **Transparency stack is genuinely unique.** No competitor examined offers anything close to JGL's specific commitments (Friday Loom, 4-hour WhatsApp replies, live dashboard, two fire calls/month). This is the strongest differentiator on the page. No changes needed - if anything, it deserves more emphasis.
+- **Published pricing is rare.** Only 1 of 6 competitors publishes a specific price (Be Known at $3,500). JGL publishing GBP 5,000 is already differentiated. Validated.
+- **Founding slot mechanic is unique.** No competitor does anything similar. Validated.
+- **"What you handle" scope boundaries are rare.** Only Marne Semick does something similar ("Funnels are not part of the ads campaign fulfillment service") but less prominently. JGL's version is stronger. Validated.
+- **Studio/creative production included is unique.** No competitor mentions free creative production / video shoots. Validated.
+
+### Where JGL is still weaker than competitors (flagged, not changed)
+
+- **Zero social proof vs. Lucia Doynel's 4 named case studies with spend/revenue/ROAS.** This is JGL's biggest gap. Can't be fixed with design - needs real client results.
+- **No performance guarantee vs. HighTicketPaidAds' "beat your ROAS or refund."** This is a positioning decision for Jossiah, not a design decision.
+- **Founder credibility is vague vs. Scale for Impact's "Former CMO at Mindvalley."** Blocked until Jossiah confirms his actual role and clears naming Expert Empires/ECA.
+- **No third-party certifications (Google Partner, Meta Partner).** If Jossiah has these, they should be added.
 
 ---
 
