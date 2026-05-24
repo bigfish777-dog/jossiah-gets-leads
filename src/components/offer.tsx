@@ -79,7 +79,7 @@ export function Offer() {
             <p className={o.featuredDesc}>
               No black boxes. No monthly reports designed to hide bad news.
               You get a custom live dashboard, a WhatsApp line with a 4-hour
-              SLA, and a Friday Loom every week where I walk through what
+              response time, and a Friday Loom every week where I walk through what
               happened, what&apos;s changing, and why.
             </p>
           </div>
@@ -105,7 +105,7 @@ export function Offer() {
             <div className={o.detailRow}>
               <span className={o.detailIcon}>&#9632;</span>
               <div>
-                <div className={o.detailTitle}>4-hour WhatsApp SLA</div>
+                <div className={o.detailTitle}>4-hour WhatsApp replies</div>
                 <div className={o.detailSub}>
                   Message me anytime. Response within 4 hours, business days
                 </div>
