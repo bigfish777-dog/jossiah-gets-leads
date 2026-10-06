@@ -1,0 +1,186 @@
+/* Order page: JGL summary on the left (dark), Stripe's embedded form on a
+   white card on the right. Mobile stacks summary then form. */
+
+.main {
+  padding: 24px 0 64px;
+  background: #f1efe8;
+  min-height: calc(100vh - 60px);
+}
+
+.grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 24px;
+}
+
+.back {
+  font-size: 13px;
+  color: var(--text-2);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+.summary {
+  /* Navy card, dark tokens regardless of the light page around it */
+  --text: #ffffff;
+  --text-2: rgba(255, 255, 255, 0.72);
+  --text-3: rgba(255, 255, 255, 0.55);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-2: rgba(255, 255, 255, 0.16);
+  color: var(--text);
+  background: var(--bg);
+  border-radius: 14px;
+  padding: 24px 22px 28px;
+}
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.face {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--mint);
+  flex: none;
+}
+
+.whoName {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.whoRole {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+.h1 {
+  margin-top: 28px;
+  font-size: clamp(32px, 7vw, 48px);
+  line-height: 1.05;
+  font-weight: 560;
+  letter-spacing: -0.03em;
+}
+
+.rows {
+  margin: 24px 0 0;
+  border-top: 1px dashed var(--line-2);
+}
+
+.rows > div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.rows dt {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding-top: 2px;
+}
+
+.rows dd {
+  margin: 0;
+}
+
+.rows > div:last-child dd {
+  font-size: 22px;
+  font-weight: 560;
+  letter-spacing: -0.01em;
+}
+
+.h2 {
+  margin-top: 32px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.next {
+  list-style: none;
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.next li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.next span {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--mint);
+  padding-top: 3px;
+}
+
+.spots {
+  margin-top: 28px;
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--mint);
+  border-radius: 999px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--mint);
+}
+
+.pay {
+  background: #ffffff;
+  border: 1px solid rgba(10, 22, 40, 0.1);
+  border-radius: 14px;
+  padding: 8px 0;
+  min-height: 560px;
+  color: #0a1628;
+}
+
+@media (min-width: 900px) {
+  .main {
+    padding: 64px 0 96px;
+  }
+
+  .grid {
+    padding: 0 40px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 64px;
+    align-items: start;
+  }
+
+  .summary {
+    position: sticky;
+    top: 100px;
+    padding: 36px 36px 40px;
+  }
+}
+
+.total {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-3);
+}

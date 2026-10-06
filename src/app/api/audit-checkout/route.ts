@@ -1,9 +1,9 @@
 import Stripe from "stripe";
 
 /*
- * Starts a Stripe Checkout for the £199 + VAT ad audit.
- * The buy buttons on /audit post here; we create a session and send the
- * buyer straight to Stripe's hosted checkout.
+ * Creates an embedded Stripe Checkout session for the £199 + VAT ad audit.
+ * The /audit/order page calls this and mounts Stripe's form inside our own
+ * branded page, using the client secret returned here.
  *
  * Needs STRIPE_SECRET_KEY (test key on previews, live key in production).
  *
@@ -51,6 +51,14 @@ export async function POST(request: Request) {
   try {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
+      ui_mode: "embedded_page",
+      branding_settings: {
+        display_name: "Jossiah Gets Leads",
+        background_color: "#ffffff",
+        button_color: "#0a1628",
+        border_style: "rounded",
+        font_family: "inter",
+      },
       // Card only (Fish, 6 Oct 2026). Apple Pay and Google Pay ride on card.
       allowed_payment_method_types: ["card"],
       line_items: [
@@ -110,11 +118,10 @@ export async function POST(request: Request) {
           },
         },
       ],
-      success_url: `${origin}/audit/thanks?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/audit#order`,
+      return_url: `${origin}/audit/thanks?session_id={CHECKOUT_SESSION_ID}`,
     });
 
-    return Response.redirect(session.url!, 303);
+    return Response.json({ clientSecret: session.client_secret });
   } catch (err) {
     console.error("audit-checkout failed", err);
     return new Response(

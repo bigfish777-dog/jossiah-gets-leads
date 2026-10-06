@@ -5,19 +5,17 @@ import s from "./audit.module.css";
 /*
  * Ad audit landing page (/audit).
  * PRICE and TURNAROUND are used everywhere on the page - change them here.
- * Every buy button posts to /api/audit-checkout, which hands the buyer to
- * Stripe Checkout. The amount itself lives in that route.
+ * Every buy button goes to /audit/order, our own order page with Stripe's
+ * card form embedded. The amount itself lives in /api/audit-checkout.
  */
 const PRICE = "£199 + VAT";
 const TURNAROUND = "72 hours";
 
 function BuyButton({ className, children }: { className: string; children: React.ReactNode }) {
   return (
-    <form action="/api/audit-checkout" method="post" className={s.buyForm}>
-      <button type="submit" className={className}>
-        {children}
-      </button>
-    </form>
+    <a href="/audit/order" className={className}>
+      {children}
+    </a>
   );
 }
 
