@@ -53,7 +53,7 @@ function Ticket({ stub = false }: { stub?: boolean }) {
         </div>
         <div>
           <dt>Done by</dt>
-          <dd>Jossiah, personally</dd>
+          <dd>Me, Jossiah (not some AI)</dd>
         </div>
       </dl>
       <div className={s.ticketTotal}>
