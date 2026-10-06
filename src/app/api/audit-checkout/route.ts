@@ -44,7 +44,7 @@ export async function POST(request: Request) {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       // Card only (Fish, 6 Oct 2026). Apple Pay and Google Pay ride on card.
-      payment_method_types: ["card"],
+      allowed_payment_method_types: ["card"],
       line_items: [
         {
           quantity: 1,
