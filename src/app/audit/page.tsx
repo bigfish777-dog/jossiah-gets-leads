@@ -23,7 +23,7 @@ function BuyButton({ className, children }: { className: string; children: React
 
 export const metadata: Metadata = {
   title: "Ad audit - Jossiah Gets Leads",
-  description: `Six years running the ads behind Expert Empires. Now I'll audit yours. A recorded walkthrough, written report and action list within 72 hours of access. ${PRICE}.`,
+  description: `Six years running the ads for two of the UK's most popular training organisations. Now I'll audit yours. A recorded walkthrough, written report and action list within 72 hours of access. ${PRICE}.`,
   robots: { index: false, follow: false },
 };
 
@@ -150,7 +150,8 @@ export default function AuditPage() {
             <div className={s.heroGrid}>
               <div>
                 <h1 className={s.h1}>
-                  Six years running the ads behind Expert Empires.{" "}
+                  Six years running the ads for two of the UK&apos;s most popular
+                  training organisations.{" "}
                   <span className={s.mint}>Now I&apos;ll audit yours.</span>
                 </h1>
                 <p className={s.lede}>{lede}</p>
@@ -179,29 +180,53 @@ export default function AuditPage() {
             <div className={s.letterSolo}>
               <div className={s.letterBody}>
                 <h2 className={s.h2}>Hi, I&apos;m Jossiah.</h2>
+                <p>{"For the past 6 years, I’ve been running the paid traffic for a couple of the UK’s most popular training organisations."}</p>
+                <p>{"Truth is, I didn’t have much of a clue what I was doing when I started."}</p>
                 <p>
-                  For six years I was Head of Lead Generation at Expert Empires
-                  and Elite Closing Academy.
+                  But I became <em>obsessed</em> with the numbers.
                 </p>
-                <p>
-                  My job was to fill rooms. Big live events, small workshops,
-                  webinars, challenges, mastermind programmes. Whatever was
-                  launching, the leads came from ads I built and ran across
-                  Meta, Google and YouTube.
-                </p>
-                <p>
-                  I&apos;ve worked the sales side too, so the leads I care about
-                  are the ones that turn up, book the call and buy.
-                </p>
-                <p>
-                  Now I&apos;ve gone out on my own. Before anyone pays me to run
-                  their ads, I&apos;d rather show them how I think. That&apos;s
-                  what this audit is: my eyes on your account, and a straight
-                  answer on what&apos;s holding it back.
-                </p>
+                <p>{"Consuming courses and trainings like no one’s business, and testing every idea and strategy I could think of, forever trying to find a way of getting better results, faster."}</p>
+                <p>{"And I like to think I’ve gotten pretty good at it."}</p>
+                <p>{"I’ve managed seven figures in ad spend, generated hundreds of thousands of leads, and helped bring in tens of millions of pounds in new revenue."}</p>
+                <p>{"But most importantly, I’ve been ‘on the tools’."}</p>
+                <p>{"For the past couple of years, countless people have told me I should be asking to get on stage. To share my insights and strategies with the 1,000s of people turning up at the events those organisations put on each year."}</p>
+                <p>{"But, honestly, that doesn’t really do anything for me."}</p>
+                <p>{"I’d rather be in the background, MacBook open, seeing if I can’t nudge the ‘cost per lead’ down by a few pence on that latest ad campaign."}</p>
+                <p>{"That’s not to say there’s anything wrong with wanting to get on stage, or to teach people about this stuff."}</p>
+                <p>{"But for me, the benefit of spending all my time actually ‘doing’ the stuff and honing my craft, well, that’s worth its weight in gold."}</p>
+                <p>{"Because over the past 12 months or so, a handful of business owners have asked me if I could take a look at their ads."}</p>
+                <p>{"Look under the bonnet, if you will. Tell them if they’re overlooking anything obvious."}</p>
+                <p>{"I said “no” to the first few requests."}</p>
+                <p>{"I figured they’d already be doing everything right, and there’s little value I could actually offer."}</p>
+                <p>{"But one day, while I was waiting for a few ads to be approved, I figured there’d be no harm in taking a look."}</p>
+                <p>{"And within 15 minutes inside their Ads Manager, it dawned on me…"}</p>
+                <p>{"Not everyone knew this stuff!"}</p>
+                <p>{"I’ve run a few more audits like that since and, without fail, I’ve been able to spot a good number of ‘hidden’ leverage points that were destroying their results."}</p>
+                <p>{"Obviously, not everyone did anything with my advice."}</p>
+                <p>{"But the ones that did saw the impact almost immediately."}</p>
+                <p>{"Cheaper leads. Better leads. More leads."}</p>
+                <p>{"The stuff that makes a tangible difference to how quickly you make a return from your ads, and a result that shows up on your business’s bottom line."}</p>
+                <p>{"Which brings us to now."}</p>
+                <p>{"After 6 fantastic years with those organisations - where I was fortunate enough to work with some truly incredible people, and learn more than I ever could have wished for - I finally took the leap and decided to go out ‘on my own’."}</p>
+                <p>{"And while I’ve already got my first few clients lined up, I figured it’d be cool to have an impact on a greater number of businesses, before I get bogged down in the ‘running ads’ side of things again."}</p>
+                <p>{"Which is why I’m taking my proven Ads Audit process, and offering it to a small handful of businesses who are:"}</p>
+                <ul className={s.letterList}>
+                  <li>{"Already running ads (either on Meta or Google, or both!)"}</li>
+                  <li>{"Not satisfied with their results, or feeling like they could be getting more from them"}</li>
+                  <li>{"Interested in having me identify the gaps and opportunities for them"}</li>
+                </ul>
+                <p>{"Now, if I were pricing this service in a few months’ time, it’d be a 4-figure investment."}</p>
+                <p>{"But while I’ve got a bit of time on my hands, I don’t want price to be a barrier for the businesses who could genuinely benefit from it."}</p>
+                <p>{"Which is why I’m running a ‘launch offer’, and dropping the investment to be just enough to cover my time."}</p>
+                <p>{"(I have to go ‘deep’ into your ad accounts to make this work - and I don’t use AI for this - so it’s not a 5-minute job!)"}</p>
+                <p>{"Needless to say, I haven’t got the capacity to do dozens of these audits."}</p>
+                <p>{"In fact, I’m only making this offer available to the first 10 businesses who register."}</p>
+                <p>{"And after that, you won’t see this offer from me again any time soon - and nowhere near this price point."}</p>
+                <p>{"So if you’re interested in having me find the hidden leverage points in your ad account, don’t hang about."}</p>
+                <p>{"Hit the button below to secure your spot, and I’ll be in touch."}</p>
                 <p className={s.sign}>
-                  Jossiah Pinto-Day
-                  <span>Founder, Jossiah Gets Leads</span>
+                  Jossiah
+                  <span>Jossiah Pinto-Day, founder of Jossiah Gets Leads</span>
                 </p>
                 <BuyRow note={PRICE} />
               </div>

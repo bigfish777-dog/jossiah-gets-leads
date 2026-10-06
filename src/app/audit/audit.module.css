@@ -101,11 +101,11 @@
 
 /* Type */
 .h1 {
-  font-size: clamp(36px, 9vw, 64px);
-  line-height: 1.04;
+  font-size: clamp(34px, 8.4vw, 54px);
+  line-height: 1.06;
   font-weight: 560;
   letter-spacing: -0.03em;
-  max-width: 15ch;
+  max-width: 18ch;
   text-wrap: balance;
 }
 
@@ -200,6 +200,27 @@
   font-size: 12px;
   letter-spacing: 0.5px;
   color: var(--text-3);
+}
+
+/* Bullets inside the letter */
+.letterList {
+  list-style: disc;
+  margin-top: 14px;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+.letterList li::marker {
+  color: var(--mint);
+}
+
+.letterBody em {
+  font-style: italic;
+  color: var(--text);
 }
 
 /* Letter without a portrait: a single readable column */
