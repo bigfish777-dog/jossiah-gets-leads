@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import s from "./audit.module.css";
+import { FindingsMock } from "./findings";
 
 /*
  * Ad audit landing page (/audit).
@@ -70,32 +71,6 @@ function Ticket({ stub = false }: { stub?: boolean }) {
 }
 
 /* Illustrative mockups of the deliverables. Example content, labelled as such. */
-function FindingsMock() {
-  const rows = [
-    ["High", "No Conversions API, so Meta is optimising on patchy browser-only data"],
-    ["High", "Event Match Quality rated poor, so Meta can't tie leads back to the people who saw your ads"],
-    ["High", "Wrong campaign objective, so ad sets are stuck in 'Learning limited' and never optimise for leads"],
-    ["Medium", "One creative for every placement, with text cut off by the Reels and Stories safe zones"],
-  ];
-  return (
-    <figure className={s.mock}>
-      <div className={s.mockHead}>
-        <span>Audit findings</span>
-        <span>Example</span>
-      </div>
-      <ol className={s.findings}>
-        {rows.map(([level, text]) => (
-          <li key={text}>
-            <span className={level === "High" ? s.tagHigh : s.tagMed}>{level}</span>
-            <span>{text}</span>
-          </li>
-        ))}
-      </ol>
-      <figcaption>An example of the action list you get, ranked by impact.</figcaption>
-    </figure>
-  );
-}
-
 function LoomMock() {
   return (
     <figure className={s.mock}>
@@ -309,7 +284,9 @@ export default function AuditPage() {
 
             <div className={s.statementWrap}>
               <p className={s.statement}>
-                Cheaper leads. Better leads. <span>More leads.</span>
+                <span className={s.st1}>Cheaper leads.</span>{" "}
+                <span className={s.st2}>Better leads.</span>{" "}
+                <span className={s.st3}>More leads.</span>
               </p>
               <p>{"The stuff that makes a tangible difference to how quickly you make a return from your ads, and a result that shows up on your business’s bottom line."}</p>
             </div>
