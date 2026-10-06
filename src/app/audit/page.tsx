@@ -156,7 +156,6 @@ const faqs = [
 ];
 
 export default function AuditPage() {
-  const lede = `Give me access to your Meta, Google or YouTube ads. Within ${TURNAROUND} you'll have a recorded walkthrough, a written report and a list of exactly what I'd change, in the order I'd change it.`;
 
   return (
     <div className={s.page}>
@@ -181,7 +180,11 @@ export default function AuditPage() {
                   training organisations.{" "}
                   <span className={s.mint}>Now I&apos;ll audit yours.</span>
                 </h1>
-                <p className={s.lede}>{lede}</p>
+                <p className={s.lede}>
+                  {`Give me access to your Meta, Google or YouTube ads. Within ${TURNAROUND} you'll have a recorded walkthrough, a written report and a list of `}
+                  <strong className={s.ledeStrong}>{"exactly what I'd change"}</strong>
+                  {", in the order I'd change it."}
+                </p>
                 <BuyRow note={`${PRICE}. One business, every platform you run.`} />
               </div>
               <figure className={s.heroPhoto}>
@@ -212,7 +215,7 @@ export default function AuditPage() {
                 <p>{"Truth is, I didn’t have much of a clue what I was doing when I started."}</p>
                 <p>
                   <strong>
-                    But I became <em>obsessed</em> with the numbers.
+                    But I became <em className={s.u}>obsessed</em> with the numbers.
                   </strong>
                 </p>
                 <p>{"Consuming courses and trainings like no one’s business, and testing every idea and strategy I could think of, forever trying to find a way of getting better results, faster."}</p>
@@ -264,11 +267,20 @@ export default function AuditPage() {
 
             <div className={s.chapter}>
               <div className={s.chapterText}>
-                <p>{"Because over the past 12 months or so, a handful of business owners have asked me if I could take a look at their ads."}</p>
-                <p>{"Look under the bonnet, if you will. Tell them if they’re overlooking anything obvious."}</p>
+                <p>
+                  {"Because over the past 12 months or so, a handful of "}
+                  <strong>business owners have asked me if I could take a look at their ads.</strong>
+                </p>
+                <p>
+                  <em>{"Look under the bonnet, if you will. Tell them if they’re overlooking anything obvious."}</em>
+                </p>
                 <p>{"I said “no” to the first few requests."}</p>
                 <p>{"I figured they’d already be doing everything right, and there’s little value I could actually offer."}</p>
-                <p>{"But one day, while I was waiting for a few ads to be approved, I figured there’d be no harm in taking a look."}</p>
+                <p>
+                  {"But one day, while I was waiting for a few ads to be approved, I figured "}
+                  <span className={s.u}>{"there’d be no harm in taking a look"}</span>
+                  {"."}
+                </p>
                 <p>{"And within 15 minutes inside their Ads Manager, it dawned on me…"}</p>
                 <p className={s.big}>Not everyone knew this stuff!</p>
                 <p>
@@ -277,7 +289,9 @@ export default function AuditPage() {
                   {" that were destroying their results."}
                 </p>
                 <p>{"Obviously, not everyone did anything with my advice."}</p>
-                <p>{"But the ones that did saw the impact almost immediately."}</p>
+                <p>
+                  <strong>{"But the ones that did saw the impact almost immediately."}</strong>
+                </p>
               </div>
               <FindingsMock />
             </div>
@@ -294,7 +308,11 @@ export default function AuditPage() {
             <div className={`${s.chapter} ${s.flip}`}>
               <div className={s.chapterText}>
                 <h3 className={s.h3}>Which brings us to now</h3>
-                <p>{"After 6 fantastic years with those organisations - where I was fortunate enough to work with some truly incredible people, and learn more than I ever could have wished for - I finally took the leap and decided to go out ‘on my own’."}</p>
+                <p>
+                  {"After 6 fantastic years with those organisations - "}
+                  <em>where I was fortunate enough to work with some truly incredible people, and learn more than I ever could have wished for</em>
+                  {" - I finally took the leap and decided to go out ‘on my own’."}
+                </p>
                 <p>{"And while I’ve already got my first few clients lined up, I figured it’d be cool to have an impact on a greater number of businesses, before I get bogged down in the ‘running ads’ side of things again."}</p>
                 <p>
                   {"Which is why I’m taking my "}
@@ -333,9 +351,14 @@ export default function AuditPage() {
                   <strong>the first 10 businesses who register</strong>
                   {"."}
                 </p>
-                <p>{"And after that, you won’t see this offer from me again any time soon - and nowhere near this price point."}</p>
+                <p>
+                  {"And after that, you won’t see this offer from me again any time soon - "}
+                  <em>and nowhere near this price point.</em>
+                </p>
                 <p>{"So if you’re interested in having me find the hidden leverage points in your ad account, don’t hang about."}</p>
-                <p>{"Hit the button below to secure your spot, and I’ll be in touch."}</p>
+                <p>
+                  <strong>{"Hit the button below to secure your spot, and I’ll be in touch."}</strong>
+                </p>
                 <p className={s.sign}>
                   Jossiah
                   <span>Jossiah Pinto-Day, founder of Jossiah Gets Leads</span>

@@ -1218,3 +1218,8 @@
     background-size: 100% 3px;
   }
 }
+
+.ledeStrong {
+  color: var(--text);
+  font-weight: 600;
+}
