@@ -179,6 +179,35 @@
   color: var(--text-3);
 }
 
+/* Hero photo of Jossiah */
+.heroPhoto {
+  margin: 0;
+  width: 100%;
+  max-width: 440px;
+}
+
+.heroPhotoFrame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-3);
+}
+
+.heroPhoto figcaption {
+  margin-top: 12px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--text-3);
+}
+
+/* Letter without a portrait: a single readable column */
+.letterSolo {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
 /* Ticket: the signature. A job ticket listing exactly what's bought. */
 .ticket {
   font-family: var(--font-mono), ui-monospace, monospace;
@@ -568,7 +597,8 @@
     gap: 72px;
   }
 
-  .heroGrid > .ticket {
+  .heroGrid > .ticket,
+  .heroGrid > .heroPhoto {
     justify-self: end;
   }
 

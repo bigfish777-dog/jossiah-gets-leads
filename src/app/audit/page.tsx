@@ -156,23 +156,27 @@ export default function AuditPage() {
                 <p className={s.lede}>{lede}</p>
                 <BuyRow note={`${PRICE}. One business, every platform you run.`} />
               </div>
-              <Ticket />
+              <figure className={s.heroPhoto}>
+                <div className={s.heroPhotoFrame}>
+                  <Image
+                    src="/jossiah-headshot.png"
+                    alt="Jossiah Pinto-Day"
+                    fill
+                    loading="eager"
+                    fetchPriority="high"
+                    sizes="(max-width: 900px) 90vw, 440px"
+                    style={{ objectFit: "cover", objectPosition: "center 25%" }}
+                  />
+                </div>
+                <figcaption>Jossiah Pinto-Day, founder</figcaption>
+              </figure>
             </div>
           </div>
         </section>
 
         <section className={`${s.section} ${s.letterSection} ${s.light}`}>
           <div className={s.wrap}>
-            <div className={s.letter}>
-              <div className={s.portrait}>
-                <Image
-                  src="/jossiah-headshot.png"
-                  alt="Jossiah Pinto-Day"
-                  fill
-                  sizes="(max-width: 900px) 180px, 380px"
-                  style={{ objectFit: "cover", objectPosition: "center 20%" }}
-                />
-              </div>
+            <div className={s.letterSolo}>
               <div className={s.letterBody}>
                 <h2 className={s.h2}>Hi, I&apos;m Jossiah.</h2>
                 <p>
