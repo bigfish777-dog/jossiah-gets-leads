@@ -48,6 +48,7 @@
   color: var(--text);
   text-decoration: none;
   padding: 9px 14px;
+  background: transparent;
   border: 1px solid var(--line-2);
   border-radius: 6px;
   transition: border-color 0.15s;
@@ -56,6 +57,21 @@
 .barPrice {
   display: none;
   color: var(--text-3);
+}
+
+/* Buy buttons are form submits so the checkout is created server-side */
+.buyForm {
+  display: contents;
+}
+
+.btn,
+.barCta {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
 }
 
 .barCta:hover {

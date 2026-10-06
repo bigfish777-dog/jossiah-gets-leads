@@ -5,14 +5,21 @@ import s from "./audit.module.css";
 /*
  * Ad audit landing page (/audit).
  * PRICE and TURNAROUND are used everywhere on the page - change them here.
- * CHECKOUT_URL is empty until the Stripe checkout is wired up; while it's
- * empty, every buy button scrolls to the order block instead.
+ * Every buy button posts to /api/audit-checkout, which hands the buyer to
+ * Stripe Checkout. The amount itself lives in that route.
  */
 const PRICE = "£199 + VAT";
 const TURNAROUND = "72 hours";
-const CHECKOUT_URL = "";
 
-const buyHref = CHECKOUT_URL || "#order";
+function BuyButton({ className, children }: { className: string; children: React.ReactNode }) {
+  return (
+    <form action="/api/audit-checkout" method="post" className={s.buyForm}>
+      <button type="submit" className={className}>
+        {children}
+      </button>
+    </form>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Ad audit - Jossiah Gets Leads",
@@ -56,9 +63,9 @@ function Ticket({ stub = false }: { stub?: boolean }) {
         <span>{PRICE}</span>
       </div>
       {stub && (
-        <a href={buyHref} className={`${s.btn} ${s.ticketBtn}`}>
+        <BuyButton className={`${s.btn} ${s.ticketBtn}`}>
           Get my ad audit <span aria-hidden="true">&#x2197;</span>
-        </a>
+        </BuyButton>
       )}
     </div>
   );
@@ -67,9 +74,9 @@ function Ticket({ stub = false }: { stub?: boolean }) {
 function BuyRow({ note }: { note: string }) {
   return (
     <div className={s.ctaRow}>
-      <a href={buyHref} className={s.btn}>
+      <BuyButton className={s.btn}>
         Get my ad audit <span aria-hidden="true">&#x2197;</span>
-      </a>
+      </BuyButton>
       <span className={s.ctaNote}>{note}</span>
     </div>
   );
@@ -131,9 +138,9 @@ export default function AuditPage() {
           <span className={s.logo}>
             JOSSIAH GETS<span aria-hidden="true">&#x2197;</span>LEADS
           </span>
-          <a href={buyHref} className={s.barCta}>
+          <BuyButton className={s.barCta}>
             Get my ad audit<span className={s.barPrice}> &middot; {PRICE}</span>
-          </a>
+          </BuyButton>
         </div>
       </header>
 
