@@ -71,6 +71,60 @@ function Ticket({ stub = false }: { stub?: boolean }) {
   );
 }
 
+/* Illustrative mockups of the deliverables. Example content, labelled as such. */
+function FindingsMock() {
+  const rows = [
+    ["High", "Lead event firing twice on the thank-you page, so reported cost per lead looks half what it really is"],
+    ["High", "Budget spread across too many ad sets for any of them to exit learning"],
+    ["Medium", "Same three creatives running for months while frequency keeps climbing"],
+    ["Medium", "Retargeting still showing ads to people who've already booked a call"],
+  ];
+  return (
+    <figure className={s.mock}>
+      <div className={s.mockHead}>
+        <span>Audit findings</span>
+        <span>Example</span>
+      </div>
+      <ol className={s.findings}>
+        {rows.map(([level, text]) => (
+          <li key={text}>
+            <span className={level === "High" ? s.tagHigh : s.tagMed}>{level}</span>
+            <span>{text}</span>
+          </li>
+        ))}
+      </ol>
+      <figcaption>An example of the action list you get, ranked by impact.</figcaption>
+    </figure>
+  );
+}
+
+function LoomMock() {
+  return (
+    <figure className={s.mock}>
+      <div className={s.loom}>
+        <div className={s.loomBar}>
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className={s.loomScreen}>
+          {[72, 54, 88, 40, 66, 58].map((w, i) => (
+            <div key={i} className={s.loomRow}>
+              <i style={{ width: `${w}%` }} />
+              <b />
+            </div>
+          ))}
+          <div className={s.loomPlay} aria-hidden="true" />
+          <div className={s.loomFace}>
+            <Image src="/jossiah-face.jpg" alt="" fill sizes="96px" />
+          </div>
+        </div>
+      </div>
+      <figcaption>Your recorded walkthrough: me, inside your account, talking you through what I found.</figcaption>
+    </figure>
+  );
+}
+
 function BuyRow({ note }: { note: string }) {
   return (
     <div className={s.ctaRow}>
@@ -175,52 +229,138 @@ export default function AuditPage() {
           </div>
         </section>
 
-        <section className={`${s.section} ${s.letterSection} ${s.light}`}>
+        <section className={`${s.section} ${s.story} ${s.light}`}>
           <div className={s.wrap}>
-            <div className={s.letterSolo}>
-              <div className={s.letterBody}>
-                <h2 className={s.h2}>Hi, I&apos;m Jossiah.</h2>
+            <h2 className={`${s.h2} ${s.storyTitle}`}>Hi, I&apos;m Jossiah.</h2>
+
+            <div className={s.chapter}>
+              <div className={s.chapterText}>
+                <h3 className={s.h3}>Obsessed with the numbers</h3>
                 <p>{"For the past 6 years, I’ve been running the paid traffic for a couple of the UK’s most popular training organisations."}</p>
                 <p>{"Truth is, I didn’t have much of a clue what I was doing when I started."}</p>
                 <p>
-                  But I became <em>obsessed</em> with the numbers.
+                  <strong>
+                    But I became <em>obsessed</em> with the numbers.
+                  </strong>
                 </p>
                 <p>{"Consuming courses and trainings like no one’s business, and testing every idea and strategy I could think of, forever trying to find a way of getting better results, faster."}</p>
                 <p>{"And I like to think I’ve gotten pretty good at it."}</p>
-                <p>{"I’ve managed seven figures in ad spend, generated hundreds of thousands of leads, and helped bring in tens of millions of pounds in new revenue."}</p>
-                <p>{"But most importantly, I’ve been ‘on the tools’."}</p>
+                <p>
+                  {"I’ve managed "}
+                  <strong>seven figures in ad spend</strong>
+                  {", generated "}
+                  <strong>hundreds of thousands of leads</strong>
+                  {", and helped bring in "}
+                  <strong>tens of millions of pounds in new revenue</strong>
+                  {"."}
+                </p>
+                <p>
+                  {"But most importantly, "}
+                  <span className={s.u}>{"I’ve been ‘on the tools’."}</span>
+                </p>
+              </div>
+              <figure className={s.chapterMedia}>
+                <div className={s.eventFrame}>
+                  <Image
+                    src="/jossiah-event.jpg"
+                    alt="Jossiah at a live event, working on his laptop while colleagues look on"
+                    fill
+                    sizes="(max-width: 900px) 100vw, 560px"
+                    style={{ objectFit: "cover", objectPosition: "56% 50%" }}
+                  />
+                </div>
+                <figcaption>{"Mid-event, laptop open. Where I’m happiest."}</figcaption>
+              </figure>
+            </div>
+
+            <div className={`${s.chapter} ${s.flip}`}>
+              <div className={s.chapterText}>
+                <h3 className={s.h3}>Happier on the tools</h3>
                 <p>{"For the past couple of years, countless people have told me I should be asking to get on stage. To share my insights and strategies with the 1,000s of people turning up at the events those organisations put on each year."}</p>
                 <p>{"But, honestly, that doesn’t really do anything for me."}</p>
-                <p>{"I’d rather be in the background, MacBook open, seeing if I can’t nudge the ‘cost per lead’ down by a few pence on that latest ad campaign."}</p>
                 <p>{"That’s not to say there’s anything wrong with wanting to get on stage, or to teach people about this stuff."}</p>
-                <p>{"But for me, the benefit of spending all my time actually ‘doing’ the stuff and honing my craft, well, that’s worth its weight in gold."}</p>
+                <p>
+                  {"But for me, the benefit of spending all my time actually ‘"}
+                  <em>doing</em>
+                  {"’ the stuff and honing my craft, well, "}
+                  <strong>{"that’s worth its weight in gold."}</strong>
+                </p>
+              </div>
+              <blockquote className={s.pull}>
+                <p>{"I’d rather be in the background, MacBook open, seeing if I can’t nudge the ‘cost per lead’ down by a few pence on that latest ad campaign."}</p>
+              </blockquote>
+            </div>
+
+            <div className={s.chapter}>
+              <div className={s.chapterText}>
+                <h3 className={s.h3}>Within 15 minutes, it dawned on me</h3>
                 <p>{"Because over the past 12 months or so, a handful of business owners have asked me if I could take a look at their ads."}</p>
                 <p>{"Look under the bonnet, if you will. Tell them if they’re overlooking anything obvious."}</p>
                 <p>{"I said “no” to the first few requests."}</p>
                 <p>{"I figured they’d already be doing everything right, and there’s little value I could actually offer."}</p>
                 <p>{"But one day, while I was waiting for a few ads to be approved, I figured there’d be no harm in taking a look."}</p>
                 <p>{"And within 15 minutes inside their Ads Manager, it dawned on me…"}</p>
-                <p>{"Not everyone knew this stuff!"}</p>
-                <p>{"I’ve run a few more audits like that since and, without fail, I’ve been able to spot a good number of ‘hidden’ leverage points that were destroying their results."}</p>
+                <p className={s.big}>Not everyone knew this stuff!</p>
+                <p>
+                  {"I’ve run a few more audits like that since and, without fail, I’ve been able to spot a good number of "}
+                  <span className={s.u}>{"‘hidden’ leverage points"}</span>
+                  {" that were destroying their results."}
+                </p>
                 <p>{"Obviously, not everyone did anything with my advice."}</p>
                 <p>{"But the ones that did saw the impact almost immediately."}</p>
-                <p>{"Cheaper leads. Better leads. More leads."}</p>
-                <p>{"The stuff that makes a tangible difference to how quickly you make a return from your ads, and a result that shows up on your business’s bottom line."}</p>
-                <p>{"Which brings us to now."}</p>
+              </div>
+              <FindingsMock />
+            </div>
+
+            <div className={s.statementWrap}>
+              <p className={s.statement}>
+                Cheaper leads. Better leads. <span>More leads.</span>
+              </p>
+              <p>{"The stuff that makes a tangible difference to how quickly you make a return from your ads, and a result that shows up on your business’s bottom line."}</p>
+            </div>
+
+            <div className={`${s.chapter} ${s.flip}`}>
+              <div className={s.chapterText}>
+                <h3 className={s.h3}>Which brings us to now</h3>
                 <p>{"After 6 fantastic years with those organisations - where I was fortunate enough to work with some truly incredible people, and learn more than I ever could have wished for - I finally took the leap and decided to go out ‘on my own’."}</p>
                 <p>{"And while I’ve already got my first few clients lined up, I figured it’d be cool to have an impact on a greater number of businesses, before I get bogged down in the ‘running ads’ side of things again."}</p>
-                <p>{"Which is why I’m taking my proven Ads Audit process, and offering it to a small handful of businesses who are:"}</p>
+                <p>
+                  {"Which is why I’m taking my "}
+                  <strong>proven Ads Audit process</strong>
+                  {", and offering it to a small handful of businesses who are:"}
+                </p>
                 <ul className={s.letterList}>
                   <li>{"Already running ads (either on Meta or Google, or both!)"}</li>
                   <li>{"Not satisfied with their results, or feeling like they could be getting more from them"}</li>
                   <li>{"Interested in having me identify the gaps and opportunities for them"}</li>
                 </ul>
-                <p>{"Now, if I were pricing this service in a few months’ time, it’d be a 4-figure investment."}</p>
+              </div>
+              <LoomMock />
+            </div>
+
+            <div className={s.chapter}>
+              <div className={s.chapterText}>
+                <h3 className={s.h3}>A launch offer, for 10 businesses</h3>
+                <p>
+                  {"Now, if I were pricing this service in a few months’ time, it’d be a "}
+                  <strong>4-figure investment</strong>
+                  {"."}
+                </p>
                 <p>{"But while I’ve got a bit of time on my hands, I don’t want price to be a barrier for the businesses who could genuinely benefit from it."}</p>
-                <p>{"Which is why I’m running a ‘launch offer’, and dropping the investment to be just enough to cover my time."}</p>
-                <p>{"(I have to go ‘deep’ into your ad accounts to make this work - and I don’t use AI for this - so it’s not a 5-minute job!)"}</p>
+                <p>
+                  {"Which is why I’m running a ‘launch offer’, and "}
+                  <span className={s.u}>dropping the investment to be just enough to cover my time</span>
+                  {"."}
+                </p>
+                <p className={s.aside}>
+                  <em>{"(I have to go ‘deep’ into your ad accounts to make this work - and I don’t use AI for this - so it’s not a 5-minute job!)"}</em>
+                </p>
                 <p>{"Needless to say, I haven’t got the capacity to do dozens of these audits."}</p>
-                <p>{"In fact, I’m only making this offer available to the first 10 businesses who register."}</p>
+                <p>
+                  {"In fact, I’m only making this offer available to "}
+                  <strong>the first 10 businesses who register</strong>
+                  {"."}
+                </p>
                 <p>{"And after that, you won’t see this offer from me again any time soon - and nowhere near this price point."}</p>
                 <p>{"So if you’re interested in having me find the hidden leverage points in your ad account, don’t hang about."}</p>
                 <p>{"Hit the button below to secure your spot, and I’ll be in touch."}</p>
@@ -228,8 +368,9 @@ export default function AuditPage() {
                   Jossiah
                   <span>Jossiah Pinto-Day, founder of Jossiah Gets Leads</span>
                 </p>
-                <BuyRow note={PRICE} />
+                <BuyRow note={`${PRICE}. First 10 businesses only.`} />
               </div>
+              <Ticket />
             </div>
           </div>
         </section>

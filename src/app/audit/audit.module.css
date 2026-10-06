@@ -231,6 +231,14 @@
 
 /* Ticket: the signature. A job ticket listing exactly what's bought. */
 .ticket {
+  /* Always dark, even when placed inside a light section */
+  --text: #ffffff;
+  --text-2: rgba(255, 255, 255, 0.72);
+  --text-3: rgba(255, 255, 255, 0.5);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-2: rgba(255, 255, 255, 0.14);
+  --mint: #5dcaa5;
+  color: var(--text);
   font-family: var(--font-mono), ui-monospace, monospace;
   background: var(--bg-2);
   border: 1px solid var(--line-2);
@@ -679,5 +687,363 @@
   .btn:hover {
     transition: none;
     transform: none;
+  }
+}
+
+/* ---------- Story: chapters with media, alternating sides ---------- */
+.story {
+  padding: 80px 0 64px;
+}
+
+.storyTitle {
+  margin-bottom: 8px;
+}
+
+.h3 {
+  font-size: clamp(22px, 5vw, 28px);
+  line-height: 1.2;
+  font-weight: 560;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  margin: 0 0 4px;
+  text-wrap: balance;
+}
+
+.chapter {
+  display: grid;
+  gap: 36px;
+  padding: 48px 0;
+}
+
+.chapter + .chapter {
+  border-top: 1px solid var(--line);
+}
+
+.chapterText {
+  max-width: 36em;
+}
+
+.chapterText p {
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+
+.chapterText strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.chapterText em {
+  font-style: italic;
+}
+
+.chapterText .letterList {
+  margin-top: 14px;
+}
+
+.u {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--cta);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+  text-decoration-skip-ink: none;
+}
+
+.big {
+  font-size: clamp(24px, 5vw, 30px) !important;
+  line-height: 1.25 !important;
+  font-weight: 600;
+  color: var(--text) !important;
+  letter-spacing: -0.01em;
+}
+
+.chapterText .aside {
+  margin-top: 16px;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* Event photo */
+.chapterMedia {
+  margin: 0;
+}
+
+.eventFrame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-3);
+}
+
+.chapterMedia figcaption,
+.mock figcaption {
+  margin-top: 12px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+  color: var(--text-3);
+}
+
+/* Pull quote */
+.pull {
+  margin: 0;
+  padding: 28px 0 0 24px;
+  border-left: 3px solid var(--cta);
+}
+
+.pull p {
+  font-size: clamp(24px, 5.2vw, 34px);
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  text-wrap: balance;
+}
+
+/* Big statement line */
+.statement {
+  margin: 24px 0;
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(32px, 8vw, 64px);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.statement span {
+  color: var(--mint);
+}
+
+/* Mockups */
+.mock {
+  margin: 0;
+  width: 100%;
+  max-width: 520px;
+}
+
+.mockHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--mint);
+  background: #ffffff;
+  border: 1px solid var(--line-2);
+  border-bottom: 1px dashed var(--line-2);
+  border-radius: 12px 12px 0 0;
+}
+
+.mockHead span:last-child {
+  color: var(--text-3);
+}
+
+.findings {
+  list-style: none;
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid var(--line-2);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+}
+
+.findings li {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 14px;
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.findings li + li {
+  border-top: 1px solid var(--line);
+}
+
+.tagHigh,
+.tagMed {
+  align-self: start;
+  justify-self: start;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.tagHigh {
+  background: #fbe3dc;
+  color: #8a2d14;
+}
+
+.tagMed {
+  background: #f6ecd2;
+  color: #6b4e0c;
+}
+
+.loom {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line-2);
+  background: #ffffff;
+}
+
+.loomBar {
+  display: flex;
+  gap: 6px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  background: #f3f2ee;
+}
+
+.loomBar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9d7d0;
+}
+
+.loomScreen {
+  position: relative;
+  padding: 22px 22px 70px;
+  display: grid;
+  gap: 14px;
+}
+
+.loomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.loomRow i {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: #e6e4dd;
+}
+
+.loomRow b {
+  display: block;
+  width: 48px;
+  height: 10px;
+  border-radius: 5px;
+  background: #d5ece3;
+}
+
+.loomPlay {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.loomPlay::after {
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 21px;
+  border-left: 18px solid var(--cta);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+.loomFace {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 1px var(--line-2);
+}
+
+.chapter > .ticket {
+  justify-self: start;
+}
+
+@media (min-width: 900px) {
+  .story {
+    padding: 120px 0 96px;
+  }
+
+  .chapter {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 80px;
+    align-items: start;
+    padding: 72px 0;
+  }
+
+  .chapter > :last-child {
+    position: sticky;
+    top: 110px;
+  }
+
+  .flip > :first-child {
+    order: 2;
+  }
+
+  .flip > :last-child {
+    order: 1;
+  }
+
+  .chapter > .ticket {
+    justify-self: end;
+  }
+
+  .statement {
+    margin: 16px 0;
+    padding: 64px 0;
+  }
+}
+
+.statementWrap {
+  margin: 16px 0;
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.statementWrap .statement {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.statementWrap p:last-child {
+  margin-top: 20px;
+  max-width: 36em;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+
+.light .ticket::before,
+.light .ticket::after {
+  background: #fbfaf7;
+}
+
+@media (min-width: 900px) {
+  .statementWrap {
+    padding: 64px 0;
   }
 }
