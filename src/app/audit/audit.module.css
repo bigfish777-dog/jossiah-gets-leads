@@ -3,6 +3,27 @@
 .page {
   position: relative;
   z-index: 1;
+  /* Brand mint for buttons, fixed even inside light sections */
+  --cta: var(--mint);
+}
+
+/* Light sections: off-white bands between the dark hero and dark close.
+   Redefines the colour tokens locally so every child adapts. */
+.light,
+.lightAlt {
+  --text: #0a1628;
+  --text-2: rgba(10, 22, 40, 0.76);
+  --text-3: rgba(10, 22, 40, 0.62);
+  --line: rgba(10, 22, 40, 0.1);
+  --line-2: rgba(10, 22, 40, 0.18);
+  --mint: #0b7356;
+  --bg-3: #e4e2da;
+  color: var(--text);
+  background: #fbfaf7;
+}
+
+.lightAlt {
+  background: #f1efe8;
 }
 
 .wrap {
@@ -131,7 +152,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--mint);
+  background: var(--cta);
   color: var(--mint-dark);
   font-weight: 600;
   font-size: 16px;

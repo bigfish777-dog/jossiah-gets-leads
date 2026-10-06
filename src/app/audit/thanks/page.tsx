@@ -41,7 +41,7 @@ export default async function ThanksPage({
       </header>
 
       <main>
-        <section className={s.hero}>
+        <section className={`${s.hero} ${s.light}`}>
           <div className={s.wrap}>
             {email === null ? (
               <>

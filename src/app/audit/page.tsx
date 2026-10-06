@@ -161,7 +161,7 @@ export default function AuditPage() {
           </div>
         </section>
 
-        <section className={`${s.section} ${s.letterSection}`}>
+        <section className={`${s.section} ${s.letterSection} ${s.light}`}>
           <div className={s.wrap}>
             <div className={s.letter}>
               <div className={s.portrait}>
@@ -205,7 +205,7 @@ export default function AuditPage() {
           </div>
         </section>
 
-        <section className={s.section}>
+        <section className={`${s.section} ${s.lightAlt}`}>
           <div className={s.wrap}>
             <div className={s.split}>
               <h2 className={s.h2}>
@@ -232,7 +232,7 @@ export default function AuditPage() {
           </div>
         </section>
 
-        <section className={s.section}>
+        <section className={`${s.section} ${s.light}`}>
           <div className={s.wrap}>
             <div className={s.split}>
               <h2 className={s.h2}>
@@ -255,7 +255,7 @@ export default function AuditPage() {
           </div>
         </section>
 
-        <section className={s.section}>
+        <section className={`${s.section} ${s.lightAlt}`}>
           <div className={s.wrap}>
             <div className={s.split}>
               <h2 className={s.h2}>
@@ -293,7 +293,7 @@ export default function AuditPage() {
           </div>
         </section>
 
-        <section className={`${s.section} ${s.tight}`}>
+        <section className={`${s.section} ${s.tight} ${s.light}`}>
           <div className={s.wrap}>
             <h2 className={s.h2}>How it works</h2>
             <ol className={s.how}>
@@ -325,7 +325,7 @@ export default function AuditPage() {
           </div>
         </section>
 
-        <section className={s.section}>
+        <section className={`${s.section} ${s.lightAlt}`}>
           <div className={s.wrap}>
             <div className={s.split}>
               <h2 className={s.h2}>Questions people ask</h2>
