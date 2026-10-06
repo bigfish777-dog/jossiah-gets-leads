@@ -6,10 +6,18 @@ import Stripe from "stripe";
  * buyer straight to Stripe's hosted checkout.
  *
  * Needs STRIPE_SECRET_KEY (test key on previews, live key in production).
- * UK VAT at 20% is added on top via a tax rate this route creates once and
- * then reuses (found by its metadata tag).
+ *
+ * VAT: JGL has applied for VAT but has no registration number yet, so HMRC
+ * rules say no VAT can be shown on receipts. Until then the price is raised
+ * to cover the VAT that will be owed (£199 + 20% = £238.80, one line, no VAT
+ * line). Once the number is issued, set VAT_NUMBER_ISSUED to true: the price
+ * goes back to £199 with a proper 20% VAT line from a tax rate this route
+ * creates once and reuses (found by its metadata tag). Buyers from the gap
+ * then get reissued VAT invoices.
  */
+const VAT_NUMBER_ISSUED = false;
 const AUDIT_PRICE_PENCE = 19900;
+const PRICE_WITH_VAT_PENCE = 23880;
 const VAT_TAG = "jgl-uk-vat-20";
 
 async function vatRateId(stripe: Stripe) {
@@ -48,10 +56,14 @@ export async function POST(request: Request) {
       line_items: [
         {
           quantity: 1,
-          tax_rates: [await vatRateId(stripe)],
+          ...(VAT_NUMBER_ISSUED
+            ? { tax_rates: [await vatRateId(stripe)] }
+            : {}),
           price_data: {
             currency: "gbp",
-            unit_amount: AUDIT_PRICE_PENCE,
+            unit_amount: VAT_NUMBER_ISSUED
+              ? AUDIT_PRICE_PENCE
+              : PRICE_WITH_VAT_PENCE,
             product_data: {
               name: "Ad audit",
               description:
@@ -60,6 +72,16 @@ export async function POST(request: Request) {
           },
         },
       ],
+      ...(VAT_NUMBER_ISSUED
+        ? {}
+        : {
+            custom_text: {
+              submit: {
+                message:
+                  "£199 plus an amount to cover VAT. Our VAT registration is in progress, so a full VAT invoice will follow once our VAT number is issued.",
+              },
+            },
+          }),
       customer_creation: "always",
       billing_address_collection: "required",
       tax_id_collection: { enabled: true },
