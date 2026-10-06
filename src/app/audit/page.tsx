@@ -72,10 +72,10 @@ function Ticket({ stub = false }: { stub?: boolean }) {
 /* Illustrative mockups of the deliverables. Example content, labelled as such. */
 function FindingsMock() {
   const rows = [
-    ["High", "Lead event firing twice on the thank-you page, so reported cost per lead looks half what it really is"],
-    ["High", "Budget spread across too many ad sets for any of them to exit learning"],
-    ["Medium", "Same three creatives running for months while frequency keeps climbing"],
-    ["Medium", "Retargeting still showing ads to people who've already booked a call"],
+    ["High", "No Conversions API, so Meta is optimising on patchy browser-only data"],
+    ["High", "Event Match Quality rated poor, so Meta can't tie leads back to the people who saw your ads"],
+    ["High", "Wrong campaign objective, so ad sets are stuck in 'Learning limited' and never optimise for leads"],
+    ["Medium", "One creative for every placement, with text cut off by the Reels and Stories safe zones"],
   ];
   return (
     <figure className={s.mock}>
@@ -233,7 +233,6 @@ export default function AuditPage() {
 
             <div className={s.chapter}>
               <div className={s.chapterText}>
-                <h3 className={s.h3}>Obsessed with the numbers</h3>
                 <p>{"For the past 6 years, I’ve been running the paid traffic for a couple of the UK’s most popular training organisations."}</p>
                 <p>{"Truth is, I didn’t have much of a clue what I was doing when I started."}</p>
                 <p>
@@ -273,9 +272,8 @@ export default function AuditPage() {
 
             <div className={`${s.chapter} ${s.flip}`}>
               <div className={s.chapterText}>
-                <h3 className={s.h3}>Happier on the tools</h3>
                 <p>{"For the past couple of years, countless people have told me I should be asking to get on stage. To share my insights and strategies with the 1,000s of people turning up at the events those organisations put on each year."}</p>
-                <p>{"But, honestly, that doesn’t really do anything for me."}</p>
+                <h3 className={`${s.h3} ${s.inlineHead}`}>{"But, honestly, that doesn’t really do anything for me."}</h3>
                 <p>{"That’s not to say there’s anything wrong with wanting to get on stage, or to teach people about this stuff."}</p>
                 <p>
                   {"But for me, the benefit of spending all my time actually ‘"}
@@ -291,7 +289,6 @@ export default function AuditPage() {
 
             <div className={s.chapter}>
               <div className={s.chapterText}>
-                <h3 className={s.h3}>Within 15 minutes, it dawned on me</h3>
                 <p>{"Because over the past 12 months or so, a handful of business owners have asked me if I could take a look at their ads."}</p>
                 <p>{"Look under the bonnet, if you will. Tell them if they’re overlooking anything obvious."}</p>
                 <p>{"I said “no” to the first few requests."}</p>
