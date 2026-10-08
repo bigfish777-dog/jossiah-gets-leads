@@ -190,13 +190,13 @@ export default function AuditPage() {
               <figure className={s.heroPhoto}>
                 <div className={s.heroPhotoFrame}>
                   <Image
-                    src="/jossiah-headshot.png"
+                    src="/jossiah-hero.jpg"
                     alt="Jossiah Pinto-Day"
                     fill
                     loading="eager"
                     fetchPriority="high"
                     sizes="(max-width: 900px) 90vw, 440px"
-                    style={{ objectFit: "cover", objectPosition: "center 25%" }}
+                    style={{ objectFit: "cover", objectPosition: "center 40%" }}
                   />
                 </div>
                 <figcaption>Jossiah Pinto-Day, founder</figcaption>
@@ -221,12 +221,9 @@ export default function AuditPage() {
                 <p>{"Consuming courses and trainings like no one’s business, and testing every idea and strategy I could think of, forever trying to find a way of getting better results, faster."}</p>
                 <p>{"And I like to think I’ve gotten pretty good at it."}</p>
                 <p>
-                  {"I’ve managed "}
-                  <strong>seven figures in ad spend</strong>
-                  {", generated "}
-                  <strong>hundreds of thousands of leads</strong>
-                  {", and helped bring in "}
-                  <strong>tens of millions of pounds in new revenue</strong>
+                  <strong>Over £1 million in advertising spend managed</strong>
+                  {", driving customer acquisition and supporting the growth of businesses generating "}
+                  <strong>over £10 million in combined revenue</strong>
                   {"."}
                 </p>
                 <p>
@@ -261,7 +258,7 @@ export default function AuditPage() {
                 </p>
               </div>
               <blockquote className={s.pull}>
-                <p>{"I’d rather be in the background, MacBook open, seeing if I can’t nudge the ‘cost per lead’ down by a few pence on that latest ad campaign."}</p>
+                <p>{"I’d rather be in the background, MacBook open, figuring out what’s working, what’s wasting money, and where the next opportunity to grow is hiding."}</p>
               </blockquote>
             </div>
 
